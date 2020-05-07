@@ -1,0 +1,164 @@
+*
+    -webkit-box-sizing: padding-box
+    -moz-box-sizing: padding-box
+    box-sizing: border-box
+    font-family: 'Source Sans Pro', sans-serif
+
+@import 'media'
+
+$main-color: #EFAA00
+$second-color: #0F0E0F
+$third-color: #FFFFFF
+
+body
+    margin: 0
+    padding: 0
+
+.header
+    padding: 15px 0
+    div
+        display: flex
+        align-items: center
+    &__link
+        color: $third-color
+        outline: none
+        font-weight: 400
+        font-size: 18px
+        margin-right: 40px
+        &:hover
+            text-decoration: none
+            color: $third-color
+
+.button
+    padding: 14px 30px
+    border: none
+    background-color: $main-color
+    font-weight: 400
+    font-size: 18px
+    outline: none
+    color: $second-color
+
+.title
+    font-weight: 700
+    font-size: 36px
+    line-height: 45px
+
+.subtitle
+    font-size: 18px
+    font-weight: 400px
+    color: $second-color
+
+.main
+    background: url('../img/Main-bg.jpg') no-repeat 
+    background-position: center center
+    background-size: cover
+    height: 100vh
+    &__content
+        padding: 25vh 0
+        color: $third-color
+    &__title
+        padding: 0
+        font-weight: 700
+        font-size: 48px
+        line-height: 60px
+    &__subtitle
+        padding: 0
+        margin-top: 30px
+        font-weight: 400
+        font-size: 18px
+        line-height: 23px
+    button
+        margin-top: 30px
+
+.quote
+    margin-top: 200px
+    color: $second-color
+    &__description
+        font-weight: 400
+        font-size: 18px
+        line-height: 23px
+    &__img
+        margin-top: 60px
+        width: 100%
+
+.last-news
+    margin-top: 200px
+    .subtitle
+        margin-top: 15px
+
+.catalog
+    margin-top: 200px
+    &__content
+        padding: 90px 60px
+        background: url('../img/Section[catalog].png') no-repeat
+        background-size: contain
+        background-position: center center
+        .title, .subtitle
+            padding: 0
+            color: $third-color
+        .subtitle
+            margin-top: 30px
+    &__link
+        color: $main-color !important
+        font-size: 18px
+        font-weight: 400
+        outline: none !important
+        text-decoration: none !important
+        display: flex
+        align-items: flex-end
+        img
+            margin-left: 15px
+            display: block
+            margin-bottom: 3px
+
+.request
+    margin-top: 200px
+    .subtitle
+        margin-top: 30px
+    form
+        input
+            margin-left: 0
+            &:nth-last-child(1)
+                margin-left: 30px
+            width: 255px
+            border: none
+            border-bottom: 1px solid $second-color
+            padding: 10px
+            outline: none
+            &::placeholder
+                font-size: 18px
+                font-weight: 400
+                color: $second-color
+    button
+        margin-top: 40px
+        float: right
+
+.footer
+    margin-top: 200px
+    padding-top: 150px
+    background-color: $second-color
+    padding-bottom: 150px
+    &__logo
+        margin-bottom: 50px     
+    &__link
+        margin-bottom: 20px
+        font-size: 18px
+        font-weight: 400
+        outline: none !important
+        text-decoration: none !important
+        color: #E0E5E8 !important
+    &__title
+        text-transform: uppercase
+        font-weight: 600
+        font-size: 18px
+        color: $third-color
+        margin-top: 18px
+        margin-bottom: 50px
+    &__column
+        display: flex
+        flex-direction: column
+    .mobile-open
+        display: none 
+ 
+       
+   
