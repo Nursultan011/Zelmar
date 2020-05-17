@@ -4,17 +4,29 @@
             width: 50% !important
         &__link
             display: none !important
+        .hamburger
+            display: block !important
 
     .main
         &__content
             padding: 15vh 0 !important
         &__title
             font-size: 40px !important
+
+    .main-2
+        height: 75vh !important
+        &__content
+            padding: 8vh 0 !important
+        &__title
+            margin-bottom: 40px !important
+            font-size: 40px !important
     
     .quote
         margin-top: 150px !important
         .title
             margin-bottom: 30px !important
+        &__img
+            height: 222px !important
 
     .catalog
         &__content
@@ -74,13 +86,42 @@
 // // ///////////////////////////////////////////////////////////////////////////
 
 @media (min-width: 768px) and (max-width: 991px)
+    .active__header
+        .active__logo
+            width: 35% !important
+        .active__link
+            margin-top: 120px !important
+            a
+                font-size: 26px !important
+                margin-bottom: 50px !important
     .header
         &__link
             display: none !important
+        .hamburger
+            display: block !important
+            &_active
+                span
+                    top: 35px !important
+
+    .request
+        form
+            input
+                margin-left: 0 !important
+                margin-bottom: 10px !important
+                width: 100% !important
+
+    .catalog
+        &__link
+            margin-top: 40px !important
+
 
 // // ///////////////////////////////////////////////////////////////////////////
 
-// @media (min-width: 992px) and (max-width: 1199px)
+@media (min-width: 992px) and (max-width: 1199px)
+    .request
+        form
+            input
+                width: 210px !important
     
                         
 

@@ -5,6 +5,10 @@
     font-family: 'Source Sans Pro', sans-serif
 
 @import 'media'
+@import 'pages_header'
+@import 'services'
+@import 'about_us'
+@import 'contacts'
 
 $main-color: #EFAA00
 $second-color: #0F0E0F
@@ -14,6 +18,42 @@ body
     margin: 0
     padding: 0
 
+.active__header
+    .active__menu
+        min-height: 100vh
+        display: none
+        background-color: $second-color
+        padding-top: 50px
+        padding-bottom: 50px
+        width: 100%
+        top: 0
+        position: fixed
+        z-index: 100
+        .active__logo
+            position: absolute
+            top: 10px
+            left: 15px
+            width: 50%
+        .active__link
+            display: flex
+            flex-direction: column
+            justify-content: center
+            align-items: center
+            margin-top: 60px
+            a
+                margin-bottom: 40px
+                font-weight: 400
+                font-size: 20px
+                line-height: 25px
+                color: $third-color
+                text-decoration: none
+                outline: none
+                &:hover
+                    color: $main-color
+            .email
+                margin-top: 20px
+                margin-bottom: 20px
+
 .header
     padding: 15px 0
     div
@@ -21,14 +61,79 @@ body
         align-items: center
     &__link
         color: $third-color
-        outline: none
+        outline: none !important
         font-weight: 400
         font-size: 18px
         margin-right: 40px
+        transition: 0.3s
+        &:nth-last-child(1)
+            margin-right: 0px !important
         &:hover
             text-decoration: none
-            color: $third-color
-
+            color: $main-color
+    .hamburger
+        cursor: pointer
+        display: none
+        width: 25px
+        height: 25px
+        position: relative
+        z-index: 1215
+        -webkit-transition: all .5s ease
+        -moz-transition: all .5s ease
+        -ms-transition: all .5s ease
+        -o-transition: all .5s ease
+        transition: all .5s ease
+        top: 5px
+        span
+            display: block
+            transition: 0.3s
+            position: absolute
+            width: 16px
+            height: 2px
+            background-color: $third-color
+            margin-left: 10px
+            &::before, &::after
+                content: ''
+                display: block
+                transition: 0.3s
+                position: absolute
+                width: 25px
+                height: 2px
+                background-color: $third-color
+                margin-left: -9px
+            &::before
+                content: ''
+                -moz-transform: translateY(-10px)
+                -ms-transform: translateY(-10px)
+                -o-transform: translateY(-10px)
+                -webkit-transform: translateY(-10px)
+                transform: translateY(-10px)
+            &::after
+                content: ''
+                -moz-transform: translateY(10px)
+                -ms-transform: translateY(10px)
+                -o-transform: translateY(10px)
+                -webkit-transform: translateY(10px)
+                transform: translateY(10px)
+        &_active
+            span
+                position: fixed
+                top: 30px
+                height: 0
+                &::before, &::after
+                    width: 30px
+                &::before
+                    -moz-transform: rotate(-45deg)
+                    -ms-transform: rotate(-45deg)
+                    -o-transform: rotate(-45deg)
+                    -webkit-transform: rotate(-45deg)
+                    transform: rotate(-45deg)
+                &::after
+                    -moz-transform: rotate(45deg)
+                    -ms-transform: rotate(45deg)
+                    -o-transform: rotate(45deg)
+                    -webkit-transform: rotate(45deg)
+                    transform: rotate(45deg)
 .button
     padding: 14px 30px
     border: none
@@ -91,7 +196,6 @@ body
     &__content
         padding: 90px 60px
         background: url('../img/Section[catalog].png') no-repeat
-        background-size: contain
         background-position: center center
         .title, .subtitle
             padding: 0
@@ -116,6 +220,8 @@ body
     .subtitle
         margin-top: 30px
     form
+        display: flex
+        flex-wrap: wrap
         input
             margin-left: 0
             &:nth-last-child(1)
