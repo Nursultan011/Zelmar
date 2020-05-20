@@ -28,5 +28,20 @@ $(document).ready(function(){
         }, 1500);
         return false;
     });
+
+    $('[data-modal=concrete').on('click', function(){
+        $('.product-range__concrete').css("color","#EFAA00").css("border-bottom","3px solid #EFAA00");
+        $('#Concrete').fadeIn();
+        $('#Block').fadeOut();
+        $('.product-range__block').css("color","#0F0E0F").css("border-bottom","0px");
+    });
+
+    $('[data-modal=block').on('click', function(){
+        $('.product-range__block').css("color","#EFAA00").css("border-bottom","3px solid #EFAA00");;
+        $('#Block').fadeIn();
+        $('#Concrete').fadeOut();
+        $('.product-range__concrete').css("color","#0F0E0F").css("border-bottom","0px");
+    });
 });
+
 
