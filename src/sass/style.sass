@@ -194,9 +194,37 @@ body
     margin-top: 200px
     .subtitle
         margin-top: 15px
+    &__slider
+        margin-top: 60px
+        display: flex
+        justify-content: space-between
+        flex-wrap: wrap
+        position: relative
+    &__slider-arrow
+        position: absolute
+        top: 30%
+        z-index: 5
+        display: inline
+        &-left
+            left: -50px
+        &-right
+            right: -50px
+    &__item
+        margin: 0 auto
+        width: 350px
+        height: 430px
+        transition: all 0.3s
+        margin-bottom: 10px
+        &:hover
+            box-shadow: 0px 4px 18px rgba(0, 0, 0, 0.1)
+        img
+            width: 100%
+    &__wrapper
+        padding: 20px 15px 15px 15px
+
 
 .catalog
-    margin-top: 200px
+    margin-top: 190px
     &__content
         padding: 90px 60px
         background: url('../img/Section[catalog].png') no-repeat
@@ -227,14 +255,13 @@ body
         display: flex
         flex-wrap: wrap
         input
-            margin-left: 0
-            &:nth-last-child(1)
-                margin-left: 30px
             width: 255px
             border: none
             border-bottom: 1px solid $second-color
             padding: 10px
             outline: none
+            & + input
+                margin-left: 30px
             &::placeholder
                 font-size: 18px
                 font-weight: 400
@@ -276,4 +303,3 @@ body
         bottom: 0
         
        
-   
